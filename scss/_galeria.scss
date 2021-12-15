@@ -1,17 +1,51 @@
+$paletaColores:(
+primario:#38B000,
+secundario:#52A53B,
+terciario:#19CA79,
+);
+
+@mixin tamañoImagen {
+	position: absolute;
+top: 50%;
+transform: translateY(-50%);
+text-align: center;
+padding: 20px;
+}
+
+@mixin alturas {
+	margin: 50px 100px;
+	width: 200px;
+	height: 185px;
+   box-sizing: border-box;
+	padding: 5px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    transition: 0,5s;
+	border-radius: 1px;
+   backgroud: map-get($paletaColores,terciario);
+
+}
+
+.img {
+   cursor: pointer;
+	transform: scale(1.2);
+	transition: 1.5s;
+	}
+
+/* Nosotros */
 
 main {
 font-family: 'Zen Antique', serif;
 line-height: 1,5;
 font-weight: normal;
 margin: 0;
-background: #38B000;
+background: map-get($paletaColores,primario);
 
 
 .h2 {
 	text-align: center;
 	font-size: 30px;
 	padding: 15px;
-	background:#52A53B ;
+	background: map-get($paletaColores,secundario);
 }
 
 .galeria {
@@ -64,11 +98,7 @@ top: 10px;
 }
 
 .contenedor .galeria .detalles .contenido-imgT {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-text-align: center;
-padding: 20px;
+@include tamañoImagen
 }
 
 .contenedor .galeria .contenido-imgJ .descripcionJ {
@@ -95,11 +125,7 @@ padding: 20px;
 }
 
 .contenedor .galeria .detalles .contenido-imgJ {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-text-align: center;
-padding: 20px;
+@include tamañoImagen
 }
 
 .contenedor .galeria .contenido-imgM .descripcionM {
@@ -126,11 +152,7 @@ padding: 20px;
 }
 
 .contenedor .galeria .detalles .contenido-imgM {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-text-align: center;
-padding: 20px;
+@include tamañoImagen
 }
 
 .contenedor .galeria .contenido-imgA .descripcionA {
@@ -157,11 +179,7 @@ padding: 20px;
 }
 
 .contenedor .galeria .detalles .contenido-imgA {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-text-align: center;
-padding: 20px;
+@include tamañoImagen
 }
 
 .contenedor .galeria .contenido-imgS .descripcionS {
@@ -188,11 +206,7 @@ padding: 20px;
 }
 
 .contenedor .galeria .detalles .contenido-imgS {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-text-align: center;
-padding: 20px;
+@include tamañoImagen
 }
 
 .contenedor .galeria .contenido-imgC .descripcionC {
@@ -215,114 +229,57 @@ padding: 20px;
 }
 
 .contenedor .galeria .detalles .contenido-imgC {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-text-align: center;
-padding: 20px;
+@include tamañoImagen
 }
 
 .imgT {
-	margin: 50px 100px;
-	width: 200px;
-	height: 185px;
-  box-sizing: border-box;
-	padding: 5px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-	transition: 0,5s;
-	border-radius: 1px;
-  background: #19CA79
-
+	@include alturas
 }
 .imgT:hover {
 	box-shadow: 0 20px 35px rgba(0, 0, 0, .5);
-	cursor: pointer;
-	transform: scale(1.2);
-	transition: 1.5s;
+	@extend .img;
 }
 
 .imgJ {
-	margin: 50px 100px;
-	width: 200px;
-	height: 185px;
-   box-sizing: border-box;
-	padding: 5px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-    transition: 0,5s;
-	border-radius: 1px;
-   background: #19CA79
+	@include alturas
 
 }
 .imgJ:hover {
-	box-shadow: 0 20px 35px rgba(0, 0, 0, .5);
-	cursor: pointer;
-} 
+	box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+	@extend .img;
+	} 
 
 .imgM {
-	margin: 50px 100px;
-	width: 200px;
-	height: 185px;
-   box-sizing: border-box;
-	padding: 5px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-	transition: 0,5s;
-	border-radius: 1px;
-   background: #19CA79
+	@include alturas
 
 }
 .imgM:hover {
 	box-shadow: 0 20px 35px rgba(0, 0, 0, .5);
-	cursor: pointer;
+	@extend .img;
 }
 
 .imgA {
-	margin: 50px 100px;
-	width: 200px;
-	height: 185px;
-   box-sizing: border-box;
-	padding: 5px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-    transition: 0,5s;
-	border-radius: 1px;
-   background: #19CA79
-
+	@include alturas
 }
 .imgA:hover {
-	box-shadow: 0 20px 35px rgba(0, 0, 0, .5);
-	cursor: pointer;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+	@extend .img;
 }
 
 .imgS {
-	margin: 50px 100px;
-	width: 200px;
-	height: 185px;
-   box-sizing: border-box;
-	padding: 5px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-	transition: 0,5s;
-	border-radius: 1px;
-   background: #19CA79
+	@include alturas
 
 }
 .imgS:hover {
 	box-shadow: 0 20px 35px rgba(0, 0, 0, .5);
-	cursor: pointer;
+	@extend .img;
 }
 
 .imgC {
-	margin: 50px 100px;
-	width: 200px;
-	height: 185px;
-   box-sizing: border-box;
-	padding: 5px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-	transition: 0,5s;
-	border-radius: 1px;
-  background: #19CA79
-
+	@include alturas
 }
 .imgC:hover {
-	box-shadow: 0 20px 35px rgba(0, 0, 0, .5);
-	cursor: pointer;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+	@extend .img;
 }
 }
