@@ -196,8 +196,10 @@ main {
     border-radius: 1px;
     background: #19CA79; }
   main .imgJ:hover {
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
-    cursor: pointer; }
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+   cursor: pointer;
+  transform: scale(1.2);
+  transition: 1.5s; }
   main .imgM {
     margin: 50px 100px;
     width: 200px;
@@ -210,7 +212,9 @@ main {
     background: #19CA79; }
   main .imgM:hover {
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
-    cursor: pointer; }
+    cursor: pointer;
+  transform: scale(1.2);
+  transition: 1.5s; }
   main .imgA {
     margin: 50px 100px;
     width: 200px;
@@ -222,8 +226,10 @@ main {
     border-radius: 1px;
     background: #19CA79; }
   main .imgA:hover {
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
-    cursor: pointer; }
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  transform: scale(1.2);
+  transition: 1.5s; }
   main .imgS {
     margin: 50px 100px;
     width: 200px;
@@ -248,8 +254,10 @@ main {
     border-radius: 1px;
     background: #19CA79; }
   main .imgC:hover {
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
-    cursor: pointer; }
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+   cursor: pointer;
+  transform: scale(1.2);
+  transition: 1.5s; }
 
 /*FOOTER*/
 footer {
